@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Web3Api","`Web3Api` namespace"]],"trait":[["Web3","List of methods from `web3` namespace"]]});

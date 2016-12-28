@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `EthApi` struct in crate `web3`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, EthApi">
+
+    <title>web3::api::eth::EthApi - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../index.html'>web3</a>::<wbr><a href='../index.html'>api</a>::<wbr><a href='index.html'>eth</a></p><script>window.sidebarCurrent = {name: 'EthApi', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../index.html'>web3</a>::<wbr><a href='../index.html'>api</a>::<wbr><a href='index.html'>eth</a>::<wbr><a class='struct' href=''>EthApi</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-165' class='srclink' href='../../../src/web3/src/api/eth.rs.html#116-118' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct EthApi&lt;'a, T:&nbsp;'a&gt; { /* fields omitted */ }</pre><div class='docblock'><p><code>Eth</code> namespace</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a, T:&nbsp;<a class='trait' href='../../../web3/trait.Transport.html' title='web3::Transport'>Transport</a> + 'a&gt; <a class='trait' href='../../../web3/api/trait.Namespace.html' title='web3::api::Namespace'>Namespace</a>&lt;'a, T&gt; for <a class='struct' href='../../../web3/api/eth/struct.EthApi.html' title='web3::api::eth::EthApi'>EthApi</a>&lt;'a, T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-169' class='srclink' href='../../../src/web3/src/api/eth.rs.html#120-126' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class='method'><span id='new.v' class='invisible'><code>fn <a href='../../../web3/api/trait.Namespace.html#tymethod.new' class='fnname'>new</a>(transport: &amp;'a T) -&gt; Self <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a></span></code></span></h4>
+<div class='docblock'><p>Creates new API namespace</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;'a, T:&nbsp;<a class='trait' href='../../../web3/trait.Transport.html' title='web3::Transport'>Transport</a> + 'a&gt; <a class='trait' href='../../../web3/api/eth/trait.Eth.html' title='web3::api::eth::Eth'>Eth</a> for <a class='struct' href='../../../web3/api/eth/struct.EthApi.html' title='web3::api::eth::EthApi'>EthApi</a>&lt;'a, T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-174' class='srclink' href='../../../src/web3/src/api/eth.rs.html#128-418' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.accounts' class='method'><span id='accounts.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.accounts' class='fnname'>accounts</a>(&amp;self) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Get list of available accounts.</p>
+</div><h4 id='method.block_number' class='method'><span id='block_number.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.block_number' class='fnname'>block_number</a>(&amp;self) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span></h4>
+<div class='docblock'><p>Get current block number</p>
+</div><h4 id='method.call' class='method'><span id='call.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.call' class='fnname'>call</a>(&amp;self, req: CallRequest, block: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;BlockNumber&gt;) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;Bytes&gt;</code></span></h4>
+<div class='docblock'><p>Call a constant method of contract without changing the state of the blockchain.</p>
+</div><h4 id='method.coinbase' class='method'><span id='coinbase.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.coinbase' class='fnname'>coinbase</a>(&amp;self) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span></h4>
+<div class='docblock'><p>Get coinbase address</p>
+</div><h4 id='method.compile_lll' class='method'><span id='compile_lll.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.compile_lll' class='fnname'>compile_lll</a>(&amp;self, code: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;Bytes&gt;</code></span></h4>
+<div class='docblock'><p>Compile LLL</p>
+</div><h4 id='method.compile_solidity' class='method'><span id='compile_solidity.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.compile_solidity' class='fnname'>compile_solidity</a>(&amp;self, code: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;Bytes&gt;</code></span></h4>
+<div class='docblock'><p>Compile Solidity</p>
+</div><h4 id='method.compile_serpent' class='method'><span id='compile_serpent.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.compile_serpent' class='fnname'>compile_serpent</a>(&amp;self, code: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;Bytes&gt;</code></span></h4>
+<div class='docblock'><p>Compile Serpent</p>
+</div><h4 id='method.estimate_gas' class='method'><span id='estimate_gas.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.estimate_gas' class='fnname'>estimate_gas</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; req: CallRequest,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; block: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;BlockNumber&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span></h4>
+<div class='docblock'><p>Call a contract without changing the state of the blockchain to estimate gas usage.</p>
+</div><h4 id='method.gas_price' class='method'><span id='gas_price.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.gas_price' class='fnname'>gas_price</a>(&amp;self) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span></h4>
+<div class='docblock'><p>Get current recommended gas price</p>
+</div><h4 id='method.balance' class='method'><span id='balance.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.balance' class='fnname'>balance</a>(&amp;self, address: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, block: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;BlockNumber&gt;) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span></h4>
+<div class='docblock'><p>Get balance of given address</p>
+</div><h4 id='method.block' class='method'><span id='block.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.block' class='fnname'>block</a>(&amp;self, block: BlockId, include_txs: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></span></h4>
+<div class='docblock'><p>Get block details</p>
+</div><h4 id='method.block_transaction_count' class='method'><span id='block_transaction_count.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.block_transaction_count' class='fnname'>block_transaction_count</a>(&amp;self, block: BlockId) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Get number of transactions in block</p>
+</div><h4 id='method.code' class='method'><span id='code.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.code' class='fnname'>code</a>(&amp;self, address: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, block: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;BlockNumber&gt;) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;Bytes&gt;</code></span></h4>
+<div class='docblock'><p>Get code under given address</p>
+</div><h4 id='method.compilers' class='method'><span id='compilers.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.compilers' class='fnname'>compilers</a>(&amp;self) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Get supported compilers</p>
+</div><h4 id='method.storage' class='method'><span id='storage.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.storage' class='fnname'>storage</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; idx: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; block: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;BlockNumber&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span></h4>
+<div class='docblock'><p>Get storage entry</p>
+</div><h4 id='method.transaction_count' class='method'><span id='transaction_count.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.transaction_count' class='fnname'>transaction_count</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; block: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;BlockNumber&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span></h4>
+<div class='docblock'><p>Get nonce</p>
+</div><h4 id='method.transaction' class='method'><span id='transaction.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.transaction' class='fnname'>transaction</a>(&amp;self, id: TransactionId) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Get transaction</p>
+</div><h4 id='method.transaction_receipt' class='method'><span id='transaction_receipt.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.transaction_receipt' class='fnname'>transaction_receipt</a>(&amp;self, hash: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Get transaction receipt</p>
+</div><h4 id='method.uncle' class='method'><span id='uncle.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.uncle' class='fnname'>uncle</a>(&amp;self, block: BlockId, index: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Get uncle</p>
+</div><h4 id='method.uncle_count' class='method'><span id='uncle_count.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.uncle_count' class='fnname'>uncle_count</a>(&amp;self, block: BlockId) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Get uncle count in block</p>
+</div><h4 id='method.work' class='method'><span id='work.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.work' class='fnname'>work</a>(&amp;self) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></span></h4>
+<div class='docblock'><p>Get work package</p>
+</div><h4 id='method.hashrate' class='method'><span id='hashrate.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.hashrate' class='fnname'>hashrate</a>(&amp;self) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span></h4>
+<div class='docblock'><p>Get hash rate</p>
+</div><h4 id='method.mining' class='method'><span id='mining.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.mining' class='fnname'>mining</a>(&amp;self) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;</code></span></h4>
+<div class='docblock'><p>Get mining status</p>
+</div><h4 id='method.new_block_filter' class='method'><span id='new_block_filter.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.new_block_filter' class='fnname'>new_block_filter</a>(&amp;self) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span></h4>
+<div class='docblock'><p>Start new block filter</p>
+</div><h4 id='method.new_pending_transaction_filter' class='method'><span id='new_pending_transaction_filter.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.new_pending_transaction_filter' class='fnname'>new_pending_transaction_filter</a>(&amp;self) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span></h4>
+<div class='docblock'><p>Start new pending transaction filter</p>
+</div><h4 id='method.protocol_version' class='method'><span id='protocol_version.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.protocol_version' class='fnname'>protocol_version</a>(&amp;self) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span></h4>
+<div class='docblock'><p>Start new pending transaction filter</p>
+</div><h4 id='method.send_raw_transaction' class='method'><span id='send_raw_transaction.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.send_raw_transaction' class='fnname'>send_raw_transaction</a>(&amp;self, rlp: Bytes) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span></h4>
+<div class='docblock'><p>Sends a rlp-encoded signed transaction</p>
+</div><h4 id='method.send_transaction' class='method'><span id='send_transaction.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.send_transaction' class='fnname'>send_transaction</a>(&amp;self, tx: TransactionRequest) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span></h4>
+<div class='docblock'><p>Sends a transaction transaction</p>
+</div><h4 id='method.sign' class='method'><span id='sign.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.sign' class='fnname'>sign</a>(&amp;self, address: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, data: Bytes) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span></h4>
+<div class='docblock'><p>Signs a hash of given data</p>
+</div><h4 id='method.submit_hashrate' class='method'><span id='submit_hashrate.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.submit_hashrate' class='fnname'>submit_hashrate</a>(&amp;self, rate: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, id: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;</code></span></h4>
+<div class='docblock'><p>Submit hashrate of external miner</p>
+</div><h4 id='method.submit_work' class='method'><span id='submit_work.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.submit_work' class='fnname'>submit_work</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nonce: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pow_hash: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mix_hash: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;</code></span></h4>
+<div class='docblock'><p>Submit work of external miner</p>
+</div><h4 id='method.syncing' class='method'><span id='syncing.v' class='invisible'><code>fn <a href='../../../web3/api/eth/trait.Eth.html#tymethod.syncing' class='fnname'>syncing</a>(&amp;self) -&gt; <a class='type' href='../../../web3/type.Result.html' title='web3::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;</code></span></h4>
+<div class='docblock'><p>Get syncing status</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "web3";
+    </script>
+    <script src="../../../jquery.js"></script>
+    <script src="../../../main.js"></script>
+    <script defer src="../../../search-index.js"></script>
+</body>
+</html>
